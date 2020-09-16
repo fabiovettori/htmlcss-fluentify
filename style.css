@@ -4,3 +4,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.position-a {
+    position: absolute;
+}
+
+.position-r {
+    position: relative;
+}
