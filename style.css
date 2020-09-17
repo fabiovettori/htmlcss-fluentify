@@ -253,6 +253,25 @@ nav div li:hover .leng-menu {
     display: block;
 }
 
+.tab-active {
+    position: relative;
+    z-index: 1;
+}
+
+.tab-active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #64de82;
+    border-radius: 50%;
+    z-index: -1;
+}
+
 
 /* HEADER */
 header {
