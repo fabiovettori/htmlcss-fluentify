@@ -61,6 +61,8 @@ nav {
 
 .nav-back {
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: white;
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
     z-index: 2;
@@ -87,11 +89,13 @@ nav ul span, nav div li span {
     color: #001A4F;
     line-height: 50px;
     padding-left: 5px;
+    vertical-align: middle;
 }
 
 nav div span {
     padding-right: 5px;
-    font-size: 18px;
+    font-size: 13px;
+    vertical-align: middle;
 }
 
 nav > div {
@@ -102,6 +106,8 @@ nav > div {
 
 nav > div li {
     display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
 }
 
 nav > div button:first-of-type {
@@ -167,6 +173,107 @@ nav div a {
     text-transform: uppercase;
     color: #001A4F;
     font-size: 13px;
+}
+
+.aziende-menu, .metodo-menu, .supporto-menu, .risorse-menu, .chi-menu, .leng-menu {
+    position: absolute;
+    background-color: #001a4f;
+    border-radius: 10px;
+    text-align: left;
+    height: auto;
+    padding: 0;
+    display: none;
+}
+
+.aziende-menu {
+    width: 180px;
+}
+
+.metodo-menu {
+    width: 200px;
+}
+
+.supporto-menu {
+    width: 220px;
+}
+
+.risorse-menu {
+    width: 110px;
+}
+
+.chi-menu {
+    width: 150px;
+}
+
+.leng-menu {
+    width: 50px;
+}
+
+.aziende-menu::after, .metodo-menu::after, .supporto-menu::after, .risorse-menu::after, .chi-menu::after, .leng-menu::after {
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #001a4f;
+    border-top: 1px solid #001a4f;
+    border-left: 1px solid #001a4f;
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    transform: rotateZ(45deg);
+}
+
+.aziende-menu::after {
+    right: 80px;
+}
+
+.metodo-menu:after {
+    right: 110px;
+}
+
+.supporto-menu:after {
+    right: 125px;
+}
+
+.risorse-menu::after {
+    right: 20px;
+}
+
+.chi-menu::after {
+    right: 50px;
+}
+
+.leng-menu::after {
+    right: 20px;
+}
+
+.aziende-menu li, .metodo-menu  li, .supporto-menu li, .risorse-menu li, .chi-menu li, .leng-menu li {
+    width: auto;
+}
+
+.aziende-menu li:nth-child(2), .metodo-menu li:nth-child(2) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.supporto-menu li:first-of-type, .chi-menu li:first-of-type, .leng-menu li:first-of-type {
+    border-bottom: 1px solid white;
+}
+
+.aziende-menu li a, .metodo-menu li a, .supporto-menu li a, .risorse-menu li a, .chi-menu li a, .leng-menu li a {
+    color: white;
+    padding: 10px;
+}
+
+.aziende-menu li a:hover, .metodo-menu li a:hover, .supporto-menu li a:hover, .risorse-menu li a:hover, .chi-menu li a:hover, .leng-menuli li a:hover {
+    opacity: .7;
+}
+
+nav ul li:first-of-type:hover .aziende-menu, nav ul li:nth-of-type(2):hover .metodo-menu, nav ul li:nth-of-type(3):hover .supporto-menu, nav ul li:nth-of-type(4):hover .risorse-menu, nav ul li:nth-of-type(5):hover .chi-menu {
+    display: block;
+}
+
+nav div li:hover .leng-menu {
+    display: block;
 }
 
 
