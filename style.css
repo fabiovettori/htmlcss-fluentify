@@ -419,6 +419,7 @@ main .service::after {
     transform: translateY(-50%);
     background-image: url(https://www.fluentify.com/home/wp-content/uploads/2020/01/Filetto_01-1.png);
     background-size: 70%;
+    background-position: right;
     height: 750px;
     width: 265px;
 }
