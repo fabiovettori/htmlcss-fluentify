@@ -29,11 +29,11 @@
     float: right;
 }
 
-.position-a {
+.pos-abs {
     position: absolute;
 }
 
-.position-r {
+.pos-rel {
     position: relative;
 }
 
@@ -114,6 +114,33 @@ header h3, header p, header button {
     background-color: white;
 }
 
+header .service::before, header .service::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+header .service::before {
+    top: 0;
+    left: 0;
+    background-image: url(https://www.fluentify.com/home/wp-content/uploads/2020/01/Filetto_verde_07.png);
+    background-position: left;
+    height: 280px;
+    width: 210px;
+}
+
+header .service::after {
+    top: 0;
+    right: 0;
+    background-image: url(https://www.fluentify.com/home/wp-content/uploads/2020/01/Filetto_verde_02.png);
+    background-position: right;
+    height: 550px;
+    width: 100px;
+}
+
 
 /* MAIN */
 /* SERVICE DESCRIPTION */
@@ -144,7 +171,7 @@ header h3, header p, header button {
     margin-bottom: 50px;
 }
 
-.sd-row-01 h2 span{
+.sd-row-01 h2 span {
     color: #64DE82;
 }
 
@@ -227,6 +254,22 @@ header h3, header p, header button {
     font-weight: 400;
     color: #727272;
     line-height: 1.5;
+}
+
+main .service::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url(https://www.fluentify.com/home/wp-content/uploads/2020/01/Filetto_02-1.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 850px;
+    width: 150px;
 }
 
 /* MOBILE-SECURITY-PLANS */
@@ -352,6 +395,34 @@ header h3, header p, header button {
     color: white;
 }
 
+.mobile-security-plans::before, .mobile-security-plans::after {
+    content: '';
+    position: absolute;
+    display: block;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.mobile-security-plans::before {
+    top: 50%;
+    left: 0;
+    background-image: url(https://www.fluentify.com/home/wp-content/uploads/2020/01/Filetto_08-1.png);
+    height: 900px;
+    width: 360px;
+}
+
+.mobile-security-plans::after {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url(https://www.fluentify.com/home/wp-content/uploads/2020/01/Filetto_01-1.png);
+    background-size: 70%;
+    height: 750px;
+    width: 265px;
+}
+
 
 /* FOOTER */
 footer {
@@ -408,13 +479,18 @@ footer a:hover {
 }
 
 .fo-left a {
-    display: block;
+    display: inline-block;
+    width: 20px;
     padding: 20px 0;
 }
 
 .social-icon {
     font-size: 16px;
     color: #64DE82;
+}
+
+.social-icon span:hover {
+    opacity: .5;
 }
 
 .fa-facebook-f {
