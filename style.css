@@ -74,14 +74,14 @@ nav img {
     display: block;
 }
 
-nav ul {
+nav > ul {
     width: calc((100% - 125px) * 0.65);
     height: 50px;
     line-height: 50px;
     padding: 0 25px;
 }
 
-nav ul li {
+nav > ul > li {
     width: calc(100% / 6);
 }
 
@@ -104,7 +104,7 @@ nav > div {
     line-height: 50px;
 }
 
-nav > div li {
+nav > div > li {
     display: inline-block;
     vertical-align: middle;
     font-size: 13px;
@@ -175,7 +175,7 @@ nav div a {
     font-size: 13px;
 }
 
-.aziende-menu, .metodo-menu, .supporto-menu, .risorse-menu, .chi-menu, .leng-menu {
+.nav-dd-menu {
     position: absolute;
     background-color: #001a4f;
     border-radius: 10px;
@@ -185,31 +185,7 @@ nav div a {
     display: none;
 }
 
-.aziende-menu {
-    width: 180px;
-}
-
-.metodo-menu {
-    width: 200px;
-}
-
-.supporto-menu {
-    width: 220px;
-}
-
-.risorse-menu {
-    width: 110px;
-}
-
-.chi-menu {
-    width: 150px;
-}
-
-.leng-menu {
-    width: 50px;
-}
-
-.aziende-menu::after, .metodo-menu::after, .supporto-menu::after, .risorse-menu::after, .chi-menu::after, .leng-menu::after {
+.nav-dd-menu::after {
     display: block;
     content: '';
     position: absolute;
@@ -222,16 +198,20 @@ nav div a {
     transform: rotateZ(45deg);
 }
 
+.risorse-menu {
+    right: 0;
+}
+
 .aziende-menu::after {
-    right: 80px;
+    right: 50px;
 }
 
 .metodo-menu:after {
-    right: 110px;
+    right: 111px;
 }
 
 .supporto-menu:after {
-    right: 125px;
+    right: 118px;
 }
 
 .risorse-menu::after {
@@ -239,15 +219,11 @@ nav div a {
 }
 
 .chi-menu::after {
-    right: 50px;
+    right: 19px;
 }
 
 .leng-menu::after {
-    right: 20px;
-}
-
-.aziende-menu li, .metodo-menu  li, .supporto-menu li, .risorse-menu li, .chi-menu li, .leng-menu li {
-    width: auto;
+    right: 14px;
 }
 
 .aziende-menu li:nth-child(2), .metodo-menu li:nth-child(2) {
@@ -259,12 +235,13 @@ nav div a {
     border-bottom: 1px solid white;
 }
 
-.aziende-menu li a, .metodo-menu li a, .supporto-menu li a, .risorse-menu li a, .chi-menu li a, .leng-menu li a {
+.nav-dd-menu li a {
     color: white;
     padding: 10px;
+    white-space: nowrap;
 }
 
-.aziende-menu li a:hover, .metodo-menu li a:hover, .supporto-menu li a:hover, .risorse-menu li a:hover, .chi-menu li a:hover, .leng-menuli li a:hover {
+.nav-dd-menu li a:hover {
     opacity: .7;
 }
 
