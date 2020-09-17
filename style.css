@@ -398,6 +398,10 @@ footer a:hover {
     padding-bottom: 50px;
 }
 
+.fo-left img:hover {
+    opacity: .7;
+}
+
 .fo-left span {
     text-transform: uppercase;
     font-weight: 700;
@@ -426,6 +430,10 @@ footer a:hover {
     line-height: 1.5;
     padding: 5px 0;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.fo-right li a:hover {
+    color: #64DE82;
 }
 
 .fo-right li a:first-of-type {
